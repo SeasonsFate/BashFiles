@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/$(whoami)/bashassessment/
+cd /home/$(whoami)/BashFiles/
 mkdir directory1
 mkdir -p directory1/directory2
 mkdir -p  directory1/directory3

@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/bashassessment
+cd ~/BashFiles
 mv directory1 assessment
 cd assessment
 mv directory2 commands
@@ -13,7 +13,7 @@ mv file3 fb_output
 mv file4 fizz
 mv file5 buzz
 mv file6 fizzbuzz
-cd ~/bashassessment/assessment
+cd ~/BashFiles/assessment
 mv directory5 logs
 cd logs
 mv file7 errorlog
