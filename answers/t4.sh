@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /usr/bin/bash
 
 export PATH="$PATH:/home/$(whoami)/BashFiles/assessment/commands/"
 source ~/.bashrc

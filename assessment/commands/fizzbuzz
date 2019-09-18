@@ -1,7 +1,36 @@
-#!bin/bash
+#!/bin/bash
+
+#declare -a array=()
+
+#for (( i=1; i<101; i++ ))
+#do
+#array+=${i}
+
 
 fizzybuzzy(){
-if [ (($1%3)) -eq 0 ] && [ (($1%5)) -eq 0]
-then
-echo "fizzbuzz"
-elif [ (($1%3)) -eq 0 ]
+	if [ $(($1%3)) -eq 0 ] && [ $(($1%5)) -eq 0 ]
+	then
+		echo "$(date) : $1 is a fizzbuzz" >> /home/$(whoami)/BashFiles/assessment/data/output
+	elif [ $(($1%3)) -eq 0 ]
+	then
+		echo "$(date) : $1 is a fizz" >> /home/$(whoami)/BashFiles/assessment/data/output
+	elif [ $(($1%5)) -eq 0 ] 
+	then
+		echo "$(date) : $1 is a buzz" >> /home/$(whoami)/BashFiles/assessment/data/output
+       else
+	       echo "$(date) : $1 is not a fizzbuzz number" >> /home/$(whoami)/BashFiles/assessment/data/output
+       fi
+}
+#done
+
+re="^[0-9]+$"
+for i in $*
+do
+	if ! [[ $i =~ $re ]]
+	then
+		echo "$i is not a numeric input" >> /home/$(whoami)/BashFiles/assessment/logs/errorlog
+	else
+		fizzybuzzy $i
+	fi
+done
+
